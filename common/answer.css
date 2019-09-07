@@ -1,0 +1,962 @@
+	* {
+		font-size: 32upx !important;
+		color: #412987;
+		font-weight: 600;
+	}
+
+	/* 弹窗页样式 */
+	.page-shade {
+		position: absolute;
+		width: 100%;
+		height: 200%;
+		background: #333333;
+		opacity: 0.4;
+		z-index: 15;
+	}
+
+	.correct-page {
+		position: absolute;
+		width: 502upx;
+		height: calc(1261upx * 1);
+		background: url(../../static/answer/shade.png) no-repeat;
+		background-size: 100% 100%;
+		top: calc(922upx - 1261upx);
+		left: calc(50% - 251upx);
+		z-index: 16;
+	}
+	
+	.correct-tips {
+		position: absolute;
+		width: 248upx;
+		height: 260upx;
+		top: calc(433 / 1280 * 100% - 922upx + 1261upx);
+		left: calc(251upx - 124upx);
+	}
+	
+	.correct-btn {
+		position: absolute;
+		width: 249upx;
+		height: 78upx;
+		top: calc(433 / 1280 * 100% - 922upx + 1261upx + 78upx + 260upx);
+		left: calc((100% - 249upx) / 2);
+	}
+	
+	.wrong-tips {
+		position: absolute;
+		width: 248upx;
+		height: 260upx;
+		top: calc(433 / 1280 * 100% - 922upx + 1261upx - 40upx);
+		left: calc(251upx - 124upx);
+	}
+	
+	.correct-text {
+		position: absolute;
+		width: 248upx;
+		height: 110upx;
+		overflow-y: auto;
+		left: calc(251upx - 124upx);
+		top: calc(433 / 1280 * 100% - 922upx + 1261upx + 20upx + 260upx - 40upx);
+	}
+	
+	.wrong-btn {
+		position: absolute;
+		width: 249upx;
+		height: 78upx;
+		bottom: 40upx;
+		left: calc((100% - 249upx) / 2);
+	}
+	
+	.closeShade {
+		position: absolute;
+		width: 80upx;
+		height: 80upx;
+		top: calc(922upx + 30upx);
+		left: calc(50% - 40upx);
+		z-index: 16;
+	}
+
+	.cj-page {
+		position: absolute;
+		width: 502upx;
+		height: calc(1261upx * 1);
+		background: url(../../static/answer/success.png) no-repeat;
+		background-size: 100% 100%;
+		top: calc(922upx - 1261upx);
+		left: calc(50% - 251upx);
+		z-index: 16;
+	}
+	
+	/* 第一题页面样式 */
+	view {
+		line-height: 1.6;
+	}
+
+	/* 翻转 */
+	.a-flip{
+		-webkit-animation:haha1 .8s linear infinite;
+	}
+	
+	.music-tips {
+		position: absolute;
+		width: 50upx;
+		height: 50upx;
+		top: 20upx;
+		right: 20upx;
+		z-index: 10;
+	}
+	
+	.answerOne {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #FFFFFF;
+		overflow: hidden;
+	}
+	
+	.one-bj-right {
+		position: absolute;
+		width: 460.8upx;
+		height: 261upx;
+		top: 0;
+		right: 0;
+	}
+	
+	.one-bj-left {
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		left: 0;
+		bottom: 0;
+	}
+	
+	.one-icon {
+		position: absolute;
+		width: 180upx;
+		height: 180upx;
+		top: 50upx;
+		left: 0;
+		-webkit-animation: move2 10s infinite alternate;
+		animation: move2 10s infinite alternate;
+	}
+	
+	.two-icon {
+		position: absolute;
+		width: 276upx;
+		height: 230.4upx;
+		top: 220upx;
+		right: -36upx;
+		z-index: 3;
+	}
+	
+	.problem-box {
+		position: relative;
+		width: 644upx;
+		height: 1280upx;
+		top: calc(50% - 610upx);
+		left: calc(50% - 322upx);
+		overflow: visible;
+	}
+	
+	.problem-first-box {
+		position: relative;
+		width: calc(419 / 384 * 800upx);
+		height: 588upx;
+		background: url(../../static/answerOne/problem_box.png) no-repeat;
+		background-size: 100% 100%;
+		top: 50upx;
+		left: 0;
+		overflow: visible;
+	}
+
+	.problem-first-tips {
+		position: absolute;
+		width: calc(126upx * 1.2);
+		height: calc(72upx * 1.2);
+		background: url(../../static/answer/an_tips.png) no-repeat;
+		background-size: 100% 100%;
+		top: -30upx;
+		left: -30upx;
+		z-index: 3;
+	}
+	
+	.problem-first-til {
+		position: absolute;
+		width: 72px;
+		height: 48upx;
+		top: calc(72upx * 1.2 - 48upx - 30upx);
+		left: calc(126upx * 1.2 - 30upx);
+	}
+	
+	.problem-secent-til {
+		position: absolute;
+		width: 72px;
+		height: 48upx;
+		top: calc(72upx * 1.2 - 48upx);
+		left: calc(126upx * 1.2);
+	}
+	
+	.problem-third-til {
+		position: absolute;
+		width: 72px;
+		height: 48upx;
+		top: calc(59 / 344 * 100%);
+		left: calc(126upx * 1.2);
+	}
+	
+	.problem-first-title {
+		width: calc(116 / 126 * 100%);
+		height: calc(59 / 72 * 100%);
+		line-height: 70.8upx;
+		color: #FFFFFF;
+	}
+	
+	.problem-first-title-box {
+		position: absolute;
+		width: calc(395 / 660 * 100%);
+		height: calc(265 / 535 * 100% - 72upx * 1.2 + 30upx);
+		top: calc(72upx * 1.2 - 30upx);
+		left: 0;
+	}
+	
+	.problem-first-text {
+		width: calc(100% - 80upx);
+		height: 100%;
+		padding: 0 40upx;
+		display: flex;
+		align-items: center;
+		line-height: 1.5 !important;
+	}
+	
+	.answer-first-box {
+		position: absolute;
+		width: 151%;
+		height: 110%;
+		background: url(../../static/answerOne/answer_box.png) no-repeat;
+		background-size: 100% 100%;
+		left: -26%;
+		bottom: -30%;
+	}
+	
+	.answer-first-content-box {
+		position: relative;
+		width: calc((572 / 870) * 100%);
+		height: calc((660 / 1274 * 100%) - 20upx);
+		left: calc(26% - (155 / 870 * 51%));
+		top: calc((180 / 1274) * 100%);
+	}
+	
+	.answer-first {
+		position: relative;
+		width: calc(100% - 40upx);
+		height: 122upx;
+		display: inline-block;
+		left: 20upx;
+	}
+	
+	.answer-first-one {
+		top: calc(((660 / 1274 * 80%) - 20upx - 488upx) / 4 + 122upx);
+	}
+	
+	.answer-first-two {
+		top: calc(((660 / 1274 * 80%) - 20upx - 488upx) / 4 + 122upx + 48upx * 2 - 20upx);
+	}
+	
+	.answer-first-three {
+		top: calc(((660 / 1274 * 80%) - 20upx - 488upx) / 4 + 122upx + 48upx * 3);
+	}
+	
+	.answer-first-four {
+		top: calc(((660 / 1274 * 80%) - 20upx - 488upx) / 4 + 122upx + 48upx * 3 + 10upx);
+	}
+	
+	.first-answer-slider {
+		width: 100%;
+		height: 26upx;
+		font-size: 0 !important;
+	}
+	
+	.answer-first-left {
+		width: 38upx;
+		height: 35upx;
+		margin-top: calc((96upx - 35upx) / 2);
+	}
+	
+	.answer-first-right {
+		position: absolute;
+		width: calc(100% - 38upx - 20upx - 40upx);
+		height: 100%;
+		top: 0;
+		right: 0;
+		padding: 0 20upx;
+	}
+	
+	/* 默认框 */
+	.first-default {
+		background: url(../../static/answerOne/answer.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 正确框 */
+	.first-correct {
+		background: url(../../static/answerOne/correct.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 错误框 */
+	.first-wrong {
+		background: url(../../static/answerOne/wrong.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	.answer-first-content {
+		display: flex;
+		width: calc(100%);
+		height: 96upx;
+		align-items: center;
+		line-height: 1.2 !important;
+	}
+	
+	/* 第二题页面样式 */
+	.answerTwo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url(../../static/answerTwo/bj.jpg) no-repeat;
+		background-size: calc(1280 / 870 * 100%) 100%;
+		overflow: hidden;
+	}
+	
+	.secent-page-tips {
+		position: absolute;
+		width: 177upx;
+		height: 219upx;
+		left: 20upx;
+		bottom: 10upx;
+	}
+	
+	.secent-page-car {
+		position: absolute;
+		width: calc(332upx * 0.6);
+		height: calc(266upx * 0.6);
+		right: 40upx;
+		bottom: 0;
+	}
+	
+	.answer-two-box {
+		position: relative;
+		width: calc((566 / 870) * 100% * 1.38);
+		height: calc((893 / 1280) * 100% * 1.2);
+		left: calc(50% - ((566 / 870) * 100% * 1.38) / 2);
+		top: calc(50% - ((893 / 1280) * 100% * 1.2) / 2);
+		z-index: 3;
+	}
+	
+	.secent-page-bell {
+		position: absolute;
+		width: calc(362upx * 0.8);
+		height: calc(463upx * 0.8);
+		left: calc(362upx * 0.3 * (-1));
+		top: calc(463upx * 0.4 * (-1));
+	}
+	
+	.problem-secent-box {
+		position: relative;
+		width: 100%;
+		height: calc((566 / 893) * 100%);
+		top: 0;
+		left: 0;
+		background: url(../../static/answerTwo/problem_box.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	.problem-secent-tips {
+		position: absolute;
+		width: calc(126upx * 1.2);
+		height: calc(72upx * 1.2);
+		background: url(../../static/answer/an_tips.png) no-repeat;
+		background-size: 100% 100%;
+		top: 0;
+		left: 0;
+		z-index: 3;
+	}
+	
+	.problem-secent-title {
+		position: absolute;
+		width: calc((458 / 566) * 100%);
+		height: 98upx;
+		line-height: 98upx;
+		top: 58upx;
+		left: 0;
+	}
+	
+	.problem-secent-content {
+		position: absolute;
+		width: calc((458 / 566) * 100% - 40upx);
+		padding: 0 30upx;
+		top: 110upx;
+		left: 0;
+		display: flex;
+		align-items: center;
+	}
+	
+	.answer-secent-box {
+		position: absolute;
+		width: 100%;
+		height: calc((640 / 893) * 100%);
+		left: 0;
+		bottom: 0;
+		background: url(../../static/answerTwo/answer_box.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	.answer-secent {
+		position: absolute;
+		width: calc((530 / 566) * 100%);
+		height: 122upx;
+		display: inline-block;
+	}
+	
+	.answer-secent-one {
+		right: 0;
+		top: calc((100% - 80upx - 122upx * 3) / 4 + 40upx);
+	}
+	
+	.answer-secent-two {
+		right: 0;
+		top: calc((100% - 80upx - 122upx * 3) / 4 * 2 + 122upx + 40upx);
+	}
+	
+	.answer-secent-three {
+		right: 0;
+		top: calc((100% - 80upx - 122upx * 3) / 4 * 3 + 122upx * 2 + 40upx);
+	}
+	
+	.secent-answer-slider-box {
+		position: absolute;
+		width: calc((530 / 566) * 100%);
+		height: 80upx;
+		right: 0;
+		bottom: 0;
+	}
+	
+	.secent-answer-slider {
+		width: calc((530 / 566) * 100%);
+		height: 26upx;
+		margin: 0 auto;
+		font-size: 0 !important;
+	}
+	
+	.answer-secent-left {
+		width: 38upx;
+		height: 35upx;
+		margin-top: calc((96upx - 35upx) / 2 + 28upx);
+		margin-left: 20upx;
+		margin-right: 20upx;
+	}
+	
+	.answer-secent-right {
+		position: absolute;
+		width: calc(100% - 38upx - 40upx - 20upx);
+		height: 122upx;
+		right: 20upx;
+		top: 0;
+	}
+	
+	/* 默认框 */
+	.secent-default {
+		background: url(../../static/answerTwo/answer.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 正确框 */
+	.secent-correct {
+		background: url(../../static/answerTwo/correct.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 错误框 */
+	.secent-wrong {
+		background: url(../../static/answerTwo/wrong.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	.answer-secent-content {
+		position: absolute;
+		display: flex;
+		height: 96upx;
+		top: 26upx;
+		left: 25upx;
+		align-items: center;
+		line-height: 1.2 !important;
+	}
+	
+	/* 第三题页面样式 */
+	.answerThree {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url(../../static/answerThree/bj.jpg) no-repeat;
+		background-size: calc(1280 / 870 * 100%) 100%;
+		overflow: hidden;
+	}
+	
+	.third-page-right {
+		position: absolute;
+		width: calc(459upx * 0.9);
+		height: calc(504upx * 0.9);
+		top: 20upx;
+		right: calc(459upx * 0.28 * (-1));
+	}
+	
+	.third-page-magnifier {
+		position: absolute;
+		width: calc(395upx * 0.8);
+		height: calc(369upx * 0.8);
+		right: calc(395upx * 0.08 * (-1));
+		bottom: calc(395upx * 0.08 * (-1));
+	}
+	
+	.problem-third-box {
+		position: absolute;
+		width: calc((800 / 870) * 100%);
+		height: calc(344 / 1280 * 100%);
+		background: url(../../static/answerThree/problem_box.png) no-repeat;
+		background-size: 100% 100%;
+		top: calc(124 / 1280 * 100%);
+		right: -10%;
+		z-index: 2;
+	}
+	
+	.answer-third-box {
+		position: absolute;
+		width: calc(719 / 870 * 100% * 1.28);
+		height: calc(929 / 1280 * 100%);
+		background: url(../../static/answerThree/answer_box.png) no-repeat;
+		background-size: 100% 100%;
+		top: calc(314 / 1280 * 100%);
+		left: -14%;
+	}
+	
+	.problem-third-tips {
+			position: absolute;
+			width: calc(126upx * 1.2);
+			height: calc(72upx * 1.2);
+			background: url(../../static/answer/an_tips.png) no-repeat;
+			background-size: 100% 100%;
+			top: 0;
+			left: 0;
+			z-index: 3;
+	}
+	
+	.problem-third-title {
+		position: absolute;
+		width: calc((495 / 717) * 100%);
+		height: 98upx;
+		line-height: 98upx;
+		top: calc((53 / 344 * 100%));
+		left: 0;
+	}
+	
+	.problem-third-content {
+		position: absolute;
+		width: calc((495 / 717) * 100% - 80upx);
+		height: calc(200 / 344 * 100%);
+		padding: 0 40upx;
+		top: calc((120 / 344 * 100%));
+		left: 0;
+		display: flex;
+		align-items: center;
+	}
+	
+	.answer-third {
+		position: absolute;
+		width: calc(566 / 719 * 100%);
+		height: 122upx;
+		left: calc(100% - (566 / 719 * 100%));
+	}
+	
+	.answer-third-one {
+		top: calc(207 / 929 * 100% + (615 / 929 * 100% - 366upx - 80upx) / 4);
+	}
+	
+	.answer-third-two {
+		top: calc(207 / 929 * 100% + ((615 / 929 * 100% - 366upx - 80upx) / 4) * 2 + 122upx);
+	}
+	
+	.answer-third-three {
+		top: calc(207 / 929 * 100% + ((615 / 929 * 100% - 366upx - 80upx) / 4) * 3 + 244upx);
+	}
+	
+	.third-answer-slider-box {
+		position: absolute;
+		width: calc(566 / 719 * 100%);
+		height: 80upx;
+		left: calc(100% - (566 / 719 * 100%));
+		bottom: calc(110 / 930 * 100%);
+	}
+	
+	.third-answer-slider {
+		width: calc((530 / 566) * 100%);
+		height: 26upx;
+		margin: 0 auto;
+		font-size: 0 !important;
+	}
+	
+	.answer-third-right {
+		position: absolute;
+		width: calc(100% - 38upx - 40upx - 20upx);
+		height: 122upx;
+		right: 20upx;
+		top: 0;
+	}
+	
+	/* 默认框 */
+	.third-default {
+		background: url(../../static/answerThree/answer.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 正确框 */
+	.third-correct {
+		background: url(../../static/answerThree/correct.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 错误框 */
+	.third-wrong {
+		background: url(../../static/answerThree/wrong.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 第四题页面样式 */
+	.answerFour {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #FFFFFF;
+		overflow: hidden;
+	}
+	
+	.fourth-tips-left {
+		position: absolute;
+		width: calc(558upx * 0.6);
+		height: calc(638upx * 0.6);
+		left: -60upx;
+		top: 30%;
+	}
+	
+	.problem-fourth-box {
+		position: absolute;
+		width: 128%;
+		height: calc(482 / 1280 * 100%);
+		background: url(../../static/answerFour/problem_box.png) no-repeat;
+		background-size: 100% 100%;
+		top: 0;
+		left: -14%;
+	}
+	
+	.answer-fourth-box {
+		position: absolute;
+		width: 128%;
+		height: calc(100% - (482 / 1280 * 100%) + 4upx);
+		background: url(../../static/answerFour/answer_box.png) no-repeat;
+		background-size: 100% 100%;
+		left: -14%;
+		bottom: 0;
+	}
+	
+	.fourth-tips-right {
+		position: absolute;
+		width: calc(741upx * 0.8);
+		height: calc(744upx * 0.8);
+		right: -20upx;
+		top: calc(482 / 1280 * 100% - 1%);
+	}
+	
+	.problem-fourth-tips {
+		position: absolute;
+		width: calc(126upx * 1.2);
+		height: calc(72upx * 1.2);
+		background: url(../../static/answer/an_tips.png) no-repeat;
+		background-size: 100% 100%;
+		top: calc(114 / 481 * 100% - 40upx);
+		left: calc(191 / 870 * 100% - 4upx);
+		z-index: 3;
+	}
+	
+	.problem-fourth-til {
+		position: absolute;
+		width: 72px;
+		height: 48upx;
+		top: calc(114 / 481 * 100% - 40upx + 72upx * 1.2 - 48upx);
+		left: calc(191 / 870 * 100% - 4upx + 126upx * 1.2);
+	}
+	
+	.problem-fourth-title {
+		position: absolute;
+		width: calc(490 / 870 * 100%);
+		height: 98upx;
+		line-height: 98upx;
+		top: calc(114 / 481 * 100% + 30upx);
+		left: calc(191 / 870 * 100%);
+	}
+	
+	.problem-fourth-content {
+		position: absolute;
+		width: calc(490 / 870 * 100% - 80upx);
+		height: calc((290 / 481 * 100%) - 68upx);
+		top: calc(114 / 481 * 100% + 48upx);
+		left: calc(191 / 870 * 100%);
+		padding: 0 40upx;
+		display: flex;
+		align-items: center;
+	}
+	
+	.answer-fourth {
+		position: absolute;
+		width: calc(565 / 870 * 100%);
+		height: 122upx;
+		left: calc(155 / 870 * 100%);
+	}
+	
+	.answer-fourth-one {
+		top: calc(107 / 801 * 100% + (607 / 801 * 100% - 366upx - 80upx) / 4);
+	}
+	
+	.answer-fourth-two {
+		top: calc(107 / 801 * 100% + (607 / 801 * 100% - 366upx - 80upx) / 4 * 2 + 122upx);
+	}
+	
+	.answer-fourth-three {
+		top: calc(107 / 801 * 100% + (607 / 801 * 100% - 366upx - 80upx) / 4 * 3 + 244upx);
+	}
+	
+	.fourth-answer-slider-box {
+		position: absolute;
+		width: calc(565 / 870 * 100%);
+		height: 80upx;
+		left: calc(155 / 870 * 100%);
+		bottom: calc(90 / 800 * 100%);
+	}
+	
+	.fourth-answer-slider {
+		width: calc((530 / 566) * 100%);
+		height: 26upx;
+		margin: 0 auto;
+		font-size: 0 !important;
+	}
+	
+	.answer-fourth-right {
+		position: absolute;
+		width: calc(100% - 38upx - 40upx - 20upx);
+		height: 122upx;
+		right: 20upx;
+		top: 0;
+	}
+	
+	/* 默认框 */
+	.fourth-default {
+		background: url(../../static/answerFour/answer.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 正确框 */
+	.fourth-correct {
+		background: url(../../static/answerFour/correct.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 错误框 */
+	.fourth-wrong {
+		background: url(../../static/answerFour/wrong.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 第五题页面样式 */
+	.answerFive {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #FFFFFF;
+		overflow: hidden;
+	}
+	
+	.problem-fifth-box {
+		position: absolute;
+		width: 128%;
+		height: calc(520 / 1280 * 100%);
+		background: url(../../static/answerFive/bj.png) no-repeat;
+		background-size: 100% 100%;
+		top: 0;
+		right: 0;
+	}
+	
+	.problem-fifth-tips {
+		position: absolute;
+		width: calc(320upx);
+		height: calc(364upx);
+		right: calc(24 / 870 * 100%);
+		top: calc(91 / 520 * 100%);
+	}
+	
+	.problem-fifth-left-tips {
+		position: absolute;
+		width: calc(231upx * 0.8);
+		height: calc(208upx * 0.8);
+		left: 24%;
+		bottom: 0;
+		z-index: 3;
+	}
+	
+	.problem-fifth-title-box {
+		position: absolute;
+		width: calc(746 / 870 * 100% - 10%);
+		height: calc(460 / 520 * 100%);
+		background: url(../../static/answerFive/problem_box.png) no-repeat;
+		background-size: 100% 100%;
+		bottom: 0;
+		left: 13%;
+		overflow: visible;
+	}
+	
+	.problem-fifth-title-tips {
+		position: absolute;
+		width: calc(126upx * 1.2);
+		height: calc(72upx * 1.2);
+		background: url(../../static/answer/an_tips.png) no-repeat;
+		background-size: 100% 100%;
+		top: calc(40 / 382 * 100% * (-1));
+		left: calc(157 / 671 * 100% - 4upx);
+		z-index: 3;
+	}
+	
+	.problem-fifth-til {
+		position: absolute;
+		width: 72px;
+		height: 48upx;
+		top: calc(40 / 382 * 100% * (-1) + 72upx * 1.2 - 48upx + 12upx);
+		left: calc(157 / 671 * 100% - 4upx + 126upx * 1.2);
+	}
+	
+	.problem-fifth-title {
+		position: absolute;
+		width: calc(438 / 671 * 100%);
+		height: 98upx;
+		line-height: 98upx;
+		top: 6upx;
+		left: calc(169 / 671 * 100%);
+	}
+	
+	.problem-fifth-title-content {
+		position: absolute;
+		width: calc(438 / 671 * 100% - 80upx);
+		height: calc(240 / 382 * 100% - 26upx);
+		top: 26upx;
+		left: calc(169 / 671 * 100%);
+		padding: 0 40upx;
+		overflow-y: auto;
+		display: flex;
+		align-items: center;
+	}
+	
+	.answer-fifth-box {
+		position: absolute;
+		width: 100%;
+		height: calc(100% - (520 / 1280 * 100%));
+		background: #D3EEFF;
+		left: 0;
+		bottom: 0;
+	}
+	
+	.answer-fifth-bj-box {
+		position: absolute;
+		width: 130%;
+		height: 100%;
+		background: url(../../static/answerFive/answer_box.png) no-repeat;
+		background-size: 100% 100%;
+		top: -4upx;
+		left: -15%;
+	}
+	
+	.answer-fifth {
+		position: absolute;
+		width: calc(544 / 870 * 100%);
+		height: 122upx;
+		left: calc(176 / 870 * 100%);
+	}
+	
+	.answer-fifth-one {
+		top: calc(38 / 763 * 100% + (656 / 763 * 100% - 366upx - 80upx) / 4);
+	}
+	
+	.answer-fifth-two {
+		top: calc(38 / 763 * 100% + (656 / 763 * 100% - 366upx - 80upx) / 4 * 2 + 122upx);
+	}
+	
+	.answer-fifth-three {
+		top: calc(38 / 763 * 100% + (656 / 763 * 100% - 366upx - 80upx) / 4 * 3 + 244upx);
+	}
+	
+	.fifth-answer-slider-box {
+		position: absolute;
+		width: calc(544 / 870 * 100%);
+		height: 80upx;
+		left: calc(176 / 870 * 100%);
+		bottom: calc(90 / 800 * 100%);
+	}
+	
+	.fifth-answer-slider {
+		width: calc((530 / 566) * 100%);
+		height: 26upx;
+		margin: 0 auto;
+		font-size: 0 !important;
+	}
+	
+	.questions-btn {
+		position: absolute;
+		width: 249upx;
+		height: 78upx;
+		left: calc(50% - 124upx);
+	}
+	
+	.answer-fifth-right {
+		position: absolute;
+		width: calc(100% - 38upx - 40upx - 20upx);
+		height: 122upx;
+		right: 20upx;
+		top: 0;
+	}
+	
+	/* 默认框 */
+	.fifth-default {
+		background: url(../../static/answerFive/answer.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 正确框 */
+	.fifth-correct {
+		background: url(../../static/answerFive/correct.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	/* 错误框 */
+	.fifth-wrong {
+		background: url(../../static/answerFive/wrong.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	.slider-bottom-text {
+		padding-top: 18upx;
+		font-size: 20upx !important;
+		font-weight: 900 !important;
+	}

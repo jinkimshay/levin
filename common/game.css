@@ -1,0 +1,580 @@
+/* 公共样式 */
+	* {
+		overflow: hidden;
+	}
+	
+	@font-face {
+		font-family: 'stand';
+		src: url('../../static/index/standcool.TTF');
+	}
+
+	view{
+		font-size:28upx; 
+		line-height:1.5;
+	}
+
+	image{width: 100%;height: 100%;}
+	
+	/* star */
+	.content{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #D3EEFF;
+		color: #412987;
+	}
+	
+		/* light */
+	.active {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	.light-top{
+		position: absolute;
+		width: 98%;
+		height: 35upx;
+		top:10upx;
+		left: 1%;
+	}
+	.light-bottom{
+		position: absolute;
+		width: 98%;
+		height: 35upx;
+		left: 1%;
+		bottom: 10upx;
+	}
+	.light-right{
+		position: absolute;
+		width: 38upx;
+		height: 90%;
+		top:1%;
+		right: 10upx;
+	}
+	.light-left{
+		position: absolute;
+		width: 38upx;
+		height: 90%;
+		top:1%;
+		left: 10upx;
+	}
+	.light {
+		width: 38upx;
+		height: 35upx;
+		position: absolute;
+	}
+	.light image{width: 100%;height: 100%;}
+	 .l-one {
+	 	left: 0;
+	 }
+	 
+	 .l-two {
+	 	left: calc((100% - 38upx) / 8 * 1);
+	 }
+	 
+	 .l-three {
+	 	left: calc((100% - 38upx) / 8 * 2);
+	 }
+	 
+	 .l-four {
+	 	left: calc((100% - 38upx) / 8 * 3);
+	 }
+	 
+	 .l-five {
+	 	left: calc((100% - 38upx) / 8 * 4);
+	 }
+	 
+	 .l-six {
+	 	left: calc((100% - 38upx) / 8 * 5);
+	 }
+	 
+	 .l-seven {
+	 	left: calc((100% - 38upx) / 8 * 6);
+	 }
+	 
+	 .l-eight {
+	 	left: calc((100% - 38upx) / 8 * 7);
+	 }
+	 
+	 .l-nine {
+	 	right: 0;
+	 }
+	 
+	 .l-ten {
+	 	top: calc((100% - 38upx) / 11 * 1);
+	 }
+	 
+	 .l-eleven {
+	 	top: calc((100% - 38upx) / 11 * 2);
+	 }
+	 .l-twelve {
+	 	top: calc((100% - 38upx) / 11 * 3);
+	 }
+	 .l-thirteen {
+	 	top: calc((100% - 38upx) / 11 * 4);
+	 }
+	 .l-fourteen {
+	 	top: calc((100% - 38upx) / 11 * 5);
+	 }
+	 .l-fifteen {
+	 	top: calc((100% - 38upx) / 11 * 6);
+	 }
+	 .l-sixteen {
+	 	top: calc((100% - 38upx) / 11 * 7);
+	 }
+	 .l-seventeen {
+	 	top: calc((100% - 38upx) / 11 * 8);
+	 }
+	 .l-eighteen {
+	 	top: calc((100% - 38upx) / 11 * 9);
+	 }
+	 .l-nineteen {
+	 	top: calc((100% - 38upx) / 11 * 10);
+	 }
+	 .l-twenty {
+	 	top: calc((100% - 38upx) / 11 * 11);
+	 }
+	 
+	 /* highlight */
+	.highlight {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.high_top {
+		width:100%;
+		height:30upx;
+		position: absolute;
+		top:2.5%;
+	}
+	.high_left{
+		width:3%;
+		height:100%;
+		left:5%;
+		position: absolute;
+	}
+	.high_right{
+		width:3%;
+		height: 100%;
+		position: absolute;
+		right: 5.5%;
+	}
+	.high_bottom{
+		width:100%;
+		height:2.5%;
+		position: absolute;
+		bottom: 3%;
+	}
+		
+		/* machine 娃娃机 */
+	.content-box{
+		position: relative;
+		width: calc(100% - 38upx * 2 - 10upx * 2 - 6%);
+		height: 89%;
+		background:#fdfc8c;
+		/* top: 5%;
+		left: calc(38upx + 5upx + 3%); */
+		border: 4upx solid #402B88;
+		overflow: hidden;
+	}
+	
+	.content-top {
+		position: absolute;
+		width: 102%;
+		height: calc(115 / 1148 * 100%);
+		background: url(../../static/game/gameb_03.png) no-repeat;
+		background-size: 100% 100%;
+		top: 0;
+		left: -1%;
+	}
+	
+	.message {
+		position: absolute;
+		width: 102%;
+		height: 98upx;
+		line-height: 98upx;
+		color: #FFFFFF;
+		top: calc(98 / 113 * 50% - 49upx);
+		left: 0;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	
+	.message text {
+		display: inline-block;
+		padding: 0 58upx;
+	}
+	
+	.content-center {
+		position: absolute;
+		width: 102%;
+		height: calc(728 / 1148 * 100%);
+		background: url(../../static/game/wawa_bj_03.jpg) no-repeat;
+		background-size: 100% 100%;
+		top: calc(115 / 1148 * 100% - 4upx);
+		left: -1%;
+	}
+	
+	.mengban {
+		position: absolute;
+		width: 102%;
+		height: 100%;
+		top: 0;
+		left: -1%;
+		z-index: 16;
+		background: rgba(211, 238, 255, 0.2);
+	}
+	
+	.cc-top {
+		position: absolute;
+		width: 102%;
+		height: 38upx;
+		top: 25upx;
+		left: -1%;
+		z-index: 3;
+	}
+	
+	.cc-clip-box {
+		position: relative;
+		width: 141upx;
+		height: calc(112upx * 0.8 + 275upx + 79upx);
+		top: 0;
+		left: calc(50% - 70);
+		z-index: 3;
+		overflow: visible;
+	}
+	
+	.cc-clip-til {
+		width: 141upx;
+		height: calc(112upx * 0.8);
+		z-index: 4;
+	}
+	
+	.cc-clip-hand-box {
+		position: absolute;
+		width: 52upx;
+		height: 275upx;
+		top: calc(112upx * 0.8 - 5upx);
+		left: calc(50% - 26upx);
+		z-index: 3;
+		overflow: visible;
+	}
+	
+	.cc-clip-hand {
+		width: 52upx;
+		height: 630upx;
+		background: url(../../static/game/zhuzi.png) no-repeat;
+		background-size: 100% 100%;
+		overflow: visible;
+	}
+	
+	.cc-clip-claw {
+		position: absolute;
+		width: 141upx;
+		height: 79upx;
+		top: calc(112upx * 0.8 + 275upx - 6upx);
+		left: calc(50% - 72upx);
+		z-index: 3;
+		overflow: visible;
+	}
+	
+	.claw-img {
+		position: absolute;
+		width: 122upx;
+		height: 122upx;
+		left: 10upx;
+		top: 15rem;
+	}
+	
+	.cc-first-wawa {
+		position: absolute;
+		width: 102%;
+		height: calc(155upx * 0.7 + 3upx);
+		top: 55%;
+		left: -1%;
+	}
+	
+	.cc-wawa-box-one {
+		width: 100%;
+		height: 133upx;
+	}
+	
+	.first-wawa-box {
+		position: absolute;
+		width: 122upx;
+		height: calc(115upx * 0.8);
+		float: left;
+	}
+	
+	.first-wwa-one {
+		left: calc((100% - 122upx * 4) / 5);
+	}
+	
+	.first-wwa-two {
+		left: calc((100% - 122upx * 4) / 5 * 2 + 122upx);
+	}
+	
+	.first-wwa-three {
+		left: calc((100% - 122upx * 4) / 5 * 3 + 122upx * 2);
+	}
+	
+	.first-wwa-four {
+		left: calc((100% - 122upx * 4) / 5 * 4 + 122upx * 3);
+	}
+	
+	.first-wwa {
+		position: absolute;
+		width: calc(122upx * 0.8);
+		height: calc(115upx * 0.8);
+		top: 0;
+		left: calc(122upx * 0.1);
+		z-index: 2;
+	}
+	
+	.first-wawa-down {
+		position: absolute;
+		width: 122upx;
+		height: 54upx;
+		z-index: 1;
+		bottom: -4upx;
+		left: 0;
+	}
+	
+	.cc-wawa-down-one {
+		position: absolute;
+		width: 102%;
+		height: 70upx;
+		left: -1%;
+		bottom: 0;
+		z-index: 0;
+	}
+	
+	.cc-secent-wawa {
+		position: absolute;
+		width: 102%;
+		height: 150upx;
+		bottom: 0;
+		left: -1%;
+	}
+	
+	.secent-wawa-box {
+		position: absolute;
+		width: calc(122upx * 1.2);
+		height: 115upx;
+		float: left;
+	}
+	
+	.secent-wwa-one {
+		left: calc((100% - 122upx * 4 * 1.2) / 5);
+	}
+	
+	.secent-wwa-two {
+		left: calc((100% - 122upx * 4 * 1.2) / 5 * 2 + 122upx * 1.2);
+	}
+	
+	.secent-wwa-three {
+		left: calc((100% - 122upx * 4 * 1.2) / 5 * 3 + 122upx * 2 * 1.2);
+	}
+	
+	.secent-wwa-four {
+		left: calc((100% - 122upx * 4 * 1.2) / 5 * 4 + 122upx * 3 * 1.2);
+	}
+	
+	.secent-wwa {
+		position: absolute;
+		width: 122upx;
+		height: 115upx;
+		top: 0;
+		left: calc(122upx * 0.1);
+		z-index: 2;
+	}
+	
+	.secent-wawa-down {
+		position: absolute;
+		width: 100%;
+		height: 54upx;
+		z-index: 1;
+		bottom: -4upx;
+		left: 0;
+	}
+	
+	.cc-wawa-down-two {
+		position: absolute;
+		width: 102%;
+		height: 100upx;
+		left: -1%;
+		bottom: 0;
+		z-index: 0;
+	}
+	
+	.content-bottom {
+		position: absolute;
+		width: 102%;
+		height: calc((1148 - 115 - 728) / 1148 * 100% + 4upx);
+		background: url(../../static/game/game_bottom.png) no-repeat;
+		background-size: 100% 100%;
+		left: -1%;
+		bottom: 0;
+	}
+	
+	.sub-btn {
+		position: absolute;
+		width: 205upx;
+		height: 190upx;
+		left: calc(50% - 103upx);
+		bottom: calc(42 / 305 * 100% + 5%);
+	}
+	
+	.sub-btn-down {
+		position: absolute;
+		width: 205upx;
+		height: 153upx;
+		left: calc(50% - 103upx);
+		bottom: calc(42 / 305 * 100% + 5%);
+	}
+	
+	.page-shade {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #000000;
+		opacity: 0.218;
+		z-index: 10;
+	}
+	
+	.material-bj {
+		position: absolute;
+		width: 120%;
+		height: calc(925 / 1280 * 100% * 1.2);
+		background: url(../../static/game/popup_bj2.png) no-repeat;
+		background-size: 100% 100%;
+		top: -50upx;
+		left: -10%;
+		z-index: 20;
+	}
+	
+	.message-box {
+		position: absolute;
+		width: 100%;
+		height: calc(592 / 925 * 100%);
+		left: 0;
+		top: calc(320 / 925 * 100%);
+	}
+	
+	.close-btn {
+		position: absolute;
+		width: 283upx;
+		height: 71upx;
+		bottom: 20upx;
+		left: calc(50% - 141upx);
+	}
+	
+	.close-fic-btn {
+		position: absolute;
+		width: 283upx;
+		height: 71upx;
+		bottom: calc(100 / 925 * 100%);
+		left: calc(50% - 141upx);
+	}
+	
+	.closeShade {
+		position: absolute;
+		width: 80upx;
+		height: 80upx;
+		top: calc((925 / 1280 * 100%) + 30upx + (114 / 1280 * 100%));
+		left: calc(50% - 40upx);
+		z-index: 16;
+	}
+	
+	.fictitious-bj {
+		position: absolute;
+		width: 100%;
+		height: calc(821 / 1280 * 100%);
+		background: url(../../static/game/popup_bj.png) no-repeat;
+		background-size: 100% 100%;
+		top: calc(114 / 1280 * 100%);
+		left: 0;
+		z-index: 20;
+	}
+	
+	.closeShade1 {
+		position: absolute;
+		width: 80upx;
+		height: 80upx;
+		top: calc(821 / 1280 * 100% + 30upx + (114 / 1280 * 100%));
+		left: calc(50% - 40upx);
+		z-index: 16;
+	}
+	
+	.gift-img {
+		position: absolute;
+		width: calc(305upx * 1);
+		height: calc(237upx * 1);
+		left: calc((100% - 305upx * 1) / 2);
+		top: 0;
+	}
+	
+	.fic-gift-img {
+		position: absolute;
+		width: calc(305upx * 1);
+		height: calc(237upx * 1);
+		left: calc((100% - 305upx * 1) / 2);
+		top: calc((100% - 237upx - 71upx - 120 / 925 * 100%) / 2);
+	}
+	
+	.gift-message {
+		position: absolute;
+		width: calc(418 / 870 * 100%);
+		height: calc(100% - 237upx * 1 - 71upx - 46 / 925 * 925 / 592 * 100% - 1%);
+		text-align: left;
+		top: calc(237upx * 1 + 8upx);
+		left: calc(50% - 418 / 870 * 50%);
+		display: inline-block;
+		z-index: 15 ;
+	}
+	
+	.input-box {
+		position: absolute;
+		width: 100%;
+		height: 80upx;
+		line-height: 80upx;
+		font-size: 18px;
+		font-weight: 600;
+		left: 0;
+	}
+	
+	.input-one {
+		top: calc((100% - 30upx - 80upx * 4) / 4 * 1);
+	}
+	
+	.input-two {
+		top: calc((100% - 30upx - 80upx * 4) / 4 * 2 + 80upx * 1);
+	}
+	
+	.input-three {
+		top: calc((100% - 30upx - 80upx * 4) / 4 * 3 + 80upx * 2);
+	}
+	
+	.input-four {
+		top: calc((100% - 30upx - 80upx * 4) / 4 * 4 + 80upx * 3);
+	}
+	
+	.material-tips {
+		position: absolute;
+		width: calc(480 / 870 * 100%);
+		word-break: break-word;
+		text-align: center;
+		font-size: 24upx;
+		left: calc(50% - 480 / 870 * 50%);
+		bottom: 96upx;
+		line-height: 1.2 !important;
+	}
+	
+	.gift-message input {
+		padding-left: 8upx;
+		font-size: 15px !important;
+		font-weight: 400 !important;
+	}

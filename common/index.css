@@ -1,0 +1,340 @@
+	/* 公共样式 */
+	* {
+		overflow: hidden;
+	}
+	
+	@font-face {
+		font-family: 'stand';
+		src: url('../../static/index/standcool.TTF');
+	}
+
+	view{
+		font-size:28upx; 
+		line-height:1.5;
+	}
+	
+	page{
+		background-color: #D3EEFF;
+	}
+	
+	.bt {
+		border-bottom: 4upx solid #3F2A87;
+	}
+	
+	.l-t{
+		top: 0;
+	}
+	
+	.l-b {
+		top: calc(100% - 35upx);
+	}
+	
+	.l-lf {
+		left: 0;
+	}
+	
+	.l-r {
+		right: 0;
+	}
+	
+	/* 背景音乐 */
+	.music-tips {
+		position: absolute;
+		width: 50upx;
+		height: 50upx;
+		top: 12upx;
+		right: 12upx;
+		z-index: 20;
+	}
+	
+	/* 翻转 */
+	.a-flip{
+		-webkit-animation:haha1 .8s linear infinite;
+	}
+
+	.active {
+		position: absolute;
+		width: 94%;
+		height: 90%;
+		top: 5%;
+		left: 3%;
+		border: 4upx solid #3F2A87;
+	}
+	
+	/* 隔离容器样式 */
+	.interval-one {
+		height: 28upx;
+		background-color: #4273CF;
+	}
+	
+	.interval-two {
+		height: 28upx;
+		background-color: #FFE828;
+	}
+	
+	.interval-three {
+		height: 58upx;
+		background-color: #FFE828;
+	}
+	
+	/* 子容器样式 */
+	.active-title {
+		position: relative;
+		width: 100%;
+		height: 25%;
+		background-color: #7FACFF;
+	}	
+	
+	.active-center {
+		width: 100%;
+		height: calc(50% - 84upx - 20upx);
+		position: relative;
+		background: url(../../static/index/center_bj.jpg) no-repeat;
+		background-size: 101% 100%;
+	}
+	
+	.active-bottom {
+		width: 100%;
+		height: 25%;
+		position: relative;
+		background: url(../../static/index/bottom_bj.jpg) no-repeat;
+		background-size: 101% 100%;
+	}
+	
+	/* 闪烁灯样式 */
+	.light {
+		width: 38upx;
+		height: 35upx;
+		position: absolute;
+		font-size: 0 !important;
+	}
+	
+	.l-one {
+		left: 0;
+	}
+	
+	.l-two {
+		left: calc((100% - 38upx) / 8 * 1);
+	}
+	
+	.l-three {
+		left: calc((100% - 38upx) / 8 * 2);
+	}
+	
+	.l-four {
+		left: calc((100% - 38upx) / 8 * 3);
+	}
+	
+	.l-five {
+		left: calc((100% - 38upx) / 8 * 4);
+	}
+	
+	.l-six {
+		left: calc((100% - 38upx) / 8 * 5);
+	}
+	
+	.l-seven {
+		left: calc((100% - 38upx) / 8 * 6);
+	}
+	
+	.l-eight {
+		left: calc((100% - 38upx) / 8 * 7);
+	}
+	
+	.l-nine {
+		right: 0;
+	}
+	
+	.l-ten {
+		top: calc((100% - 35upx) / 3 * 1);
+	}
+	
+	.l-eleven {
+		top: calc((100% - 35upx) / 3 * 2);
+	}
+	
+	.title {
+		width: 436.8upx;
+		height: 183.3upx;
+		position: absolute;
+		left: calc((100% - 436.8upx) / 2);
+		top: calc((100% - 183.3upx) / 2);
+	}
+	
+	/* 规则图标 */
+	.rule {
+		width: 165upx;
+		height: 58.5upx;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	/* center子容器样式 */
+		.center-title {
+		width: 100%;
+		height: 28upx;
+		position: absolute;
+		top: 28upx;
+		left: 0;
+		background: #A0CEFF;
+		border-top: 4upx solid #3F2A87;
+	}
+	
+	.center-next {
+		width: 100%;
+		height: 15upx;
+		position: absolute;
+		top: 56upx;
+		left: 0;
+		background: #007AFF;
+		border-top: 4upx solid #3F2A87;
+		border-bottom: 4upx solid #3F2A87;
+	}
+	
+	.center-three {
+		width: 124upx;
+		height: 301upx;
+		position: absolute;
+		top: 20upx;
+		left: 56upx;
+		z-index: 2;
+		-webkit-animation: move 10s infinite alternate;
+		animation: move 10s infinite alternate;
+	}
+	
+	.center-bottom {
+		width: calc(100% + 8upx);
+		height: 195upx;
+		position: absolute;
+		left: -4upx;
+		bottom: -4upx;
+	}
+	
+	/* bottom子容器样式 */
+	.button {
+		width: 228upx;
+		height: 211upx;
+		position: absolute;
+		left: calc((100% - 228upx) / 2);
+		bottom: 10upx;
+	}
+	
+	.button-on {
+		width: 228upx;
+		height: 160upx;
+		position: absolute;
+		left: calc((100% - 228upx) / 2);
+		bottom: 10upx;
+	}
+	
+	.logo {
+		width: 94%;
+		height: 36upx;
+		position: absolute;
+		top: 96%;
+	}
+	
+	.logo-box {
+		width: 275upx;
+		height: 100%;
+		position: absolute;
+		right: 0;
+	}
+
+	.open-app {
+		position: absolute;
+		width: 394upx;
+		height: 168upx;
+		top: calc(50% - 84upx);
+		left: calc(50% - 197upx);
+		z-index: 10;
+	}
+
+	.open-app-tips {
+		position: fixed;
+		width: 100%;
+		height: 150%;
+		background: #000000;
+		opacity: 0.618;
+		top: 0;
+		left: 0;
+		z-index: 9;
+	}
+	
+	.leave-data {
+		position: absolute;
+		width: 870upx;
+		height: 925upx;
+		z-index: 99;
+		top: 0;
+		left: calc((100% - 870upx) / 2);
+		background: url(../../static/index/tips_bj.png) no-repeat;
+		background-size: 100% 100%;
+		display: flex;
+		align-items: center;
+	}
+	
+	.prize-img {
+		position: absolute;
+		width: 305upx;
+		height: 237upx;
+		top: calc(328upx + 20upx);
+		left: calc(50% - 305upx / 2);
+	}
+	
+	.uni-input {
+		width: calc(460 / 870 * 100%);
+		height: 50upx;
+		text-align: left;
+		padding-left: 8upx;
+		margin-left: calc(50% - 460 / 870 * 100% / 2);
+	}
+	
+	.input-one {
+		margin-top: 580upx;
+	}
+	
+	.input-two {
+		margin-top: 20upx;
+	}
+	
+	.input-three {
+		margin-top: 20upx;
+	}
+	
+	.fits-msg {
+		position: absolute;
+		width: 100%;
+		top: calc(328upx + 237upx + 100upx);
+		left: 0;
+		font-size: 1rem;
+		font-family: stand;
+		color: #523f92;
+		/* color: #FFFFFF; */
+	}
+	
+	.close-btn {
+		width: 283upx;
+		height: 71upx;
+		margin-top: 40upx;
+		margin-left: calc(50% - 283 / 870 * 100% / 2);
+	}
+	
+	.super-box {
+		position: absolute;
+		width: 568upx;
+		height: 343upx;
+		top: calc((100% - 343upx) / 2);
+		left: calc((100% - 568upx) / 2);
+		z-index: 10;
+	}
+	
+	.super-close {
+		position: absolute;
+		width: 50upx;
+		height: 50upx;
+		top: calc((100% - 343upx) / 2 - 50upx);
+		right: calc((100% - 568upx) / 2);
+		z-index: 10;
+	}
