@@ -125,11 +125,13 @@
 				</view>
 				<view class="interval-two bt"></view>
 				<view class="active-bottom bt">
-					<view :class="changeClass" @click="changeImage" v-show="showImg">
-						<image :src="index_button" mode=""></image>
-					</view>
-					<view :class="changeClass" @click="changeImage" v-show="!showImg">
-						<image :src="gift_button" mode=""></image>
+					<view class="index-button-box" v-show="indexButtonBoxShow">
+						<view :class="changeClass" @click="changeImage" v-show="showImg">
+							<image :src="index_button" mode=""></image>
+						</view>
+						<view :class="changeClass" @click="changeImage" v-show="!showImg">
+							<image :src="gift_button" mode=""></image>
+						</view>
 					</view>
 				</view>
 				<view class="interval-three"></view>
@@ -586,7 +588,7 @@
 </template>
 
 <script>
-	// import VConsole from '../../common/vconsole.min.js';
+	import VConsole from '../../common/vconsole.min.js';
 	
 	export default {
 		data() {
@@ -737,39 +739,41 @@
 				e_phone: '',
 				vin: '',
 				phone: '',
+				indexButtonBoxShow: false,
 			}
 		},
 		onLoad(option) {
 			let _this = this;
-			// var vConsole = new VConsole();
+			require('../../common/GTMC_JSSDK_V3.11.min.js');
+			var vConsole = new VConsole();
 			var evin = option.vin;
 			var phone = option.phone;
-			var dvin = new Buffer(evin, 'base64');
-			var vin = dvin.toString('utf8');
-			var p = new Buffer(phone, 'base64');
-			var _p = p.toString('utf8');
-			var _p = parseInt(_p) / 8;
+			evin = 'TFZMTFBCOUUwS0cwMDAwMDE=';
+			phone = 'MTA5MDkzNDY4OTYw';
+			// var dvin = new Buffer(evin, 'base64');
+			// var vin = dvin.toString('utf8');
+			// var p = new Buffer(phone, 'base64');
+			// var _p = p.toString('utf8');
+			// var _p = parseInt(_p) / 8;
 			
 			_this.e_vin = evin;
-			_this.vin = vin;
 			_this.e_phone = phone;
-			_this.phone = _p;
+			// _this.vin = vin;
+			// _this.phone = _p;
 			/**
 			 * 判断会员是否参加过游戏
 			 */
 			uni.request({
-				url: 'http://levin.bluehd.cn/api.php/userinfo/getUserInfo',
+				url: 'http://change.bluehd.cn/api.php/userinfo/getUserInfo',
 				method: 'POST',
 				data: {
 					'access_token': '5b7f60aca7e7f6f8c680b1b219ad3ec6',
-					'vin': _this.vin
+					'vin': evin
 				},
 				success(res) {
-					console.log(res)
 					if(res.statusCode == 500)
 					{
 						window.location.reload()
-						// console.log(_this._vin)
 					}
 					if(res.data.code == 0)
 					{
@@ -795,38 +799,10 @@
 							_this.pimg = _this.prize[res.data.pid];
 						}
 					}
+					_this.indexButtonBoxShow = !_this.indexButtonBoxShow
 				}
 			});
-			/**
-			 * 获取题库
-			 */
-			uni.request({
-				url: 'http://levin.bluehd.cn/api.php/problem/problemlist',
-				method: 'POST',
-				data: {
-					'access_token': '5b7f60aca7e7f6f8c680b1b219ad3ec6'
-				},
-				success(res) {
-					if(res.statusCode == 500)
-					{
-						window.location.reload()
-						// console.log(_this._vin)
-					}
-					_this.oneData = res.data.data[0];
-					_this.twoData = res.data.data[1];
-					_this.threeData = res.data.data[2];
-					_this.fourData = res.data.data[3];
-					_this.fiveData = res.data.data[4];
-				}
-			});
-		},
-		mounted() {
-			let _this = this;
-			require('../../common/GTMC_JSSDK_V3.11.min.js');
-			_this.suspendMusic = !_this.suspendMusic;
-			_this.showMusic = !_this.showMusic;
-			document.querySelector('#bjMusic audio').play();
-			_this.answerAudioAutoPlay();
+			
 			/**
 			 * 判断是否应用内打开,如不是，跳转下载
 			 */
@@ -843,32 +819,124 @@
 				}
 			}
 			GTMC.getEnvironment('webToApp');
-
 			/**
 			 * 储存会员名及会员电话
 			 */
 			window.getUserInfo = res=>{
-			// 	console.log(res)
-				// var user = 'jinkim', phone = '18328320752', vin = _this.vin;
-				var user = '', phone = _this.phone, vin = _this.vin;
+				var user = '', userId = '', phone = _this.e_phone, vin = _this.e_vin, token = '';
 				var _res = JSON.parse(res);
+				var personTrue = false;
 				user = _res.params.userInfo.userName;
-			
+				userId = _res.params.userInfo.userId;
+				token = _res.params.userInfo.jwt;
+				/**
+				 * 验证用户真实
+				 */
 				uni.request({
-					url: 'http://levin.bluehd.cn/api.php/userinfo/sendUserInfo',
+					url: 'http://change.bluehd.cn/api.php/userinfo/verifyPerson',
 					method: 'POST',
 					data: {
 						access_token: '5b7f60aca7e7f6f8c680b1b219ad3ec6',
-						user: user,
+						token: token,
 						tel: phone,
 						vin: vin
 					},
 					success(re) {
-						// console.log(re)
+						console.log(re.data.data.resultCode)
+						if(re.data.data.resultCode != 2)
+						{
+							// 弹出不符合条件的页面
+							console.log(1)
+						}
 					}
 				})
+				/**
+				 * 验证用户车联网
+				 */
+				uni.request({
+					url: 'http://change.bluehd.cn/api.php/userinfo/getCarWhetherOpen',
+					method: 'POST',
+					data: {
+						access_token: '5b7f60aca7e7f6f8c680b1b219ad3ec6',
+						userId: userId,
+						vin: vin
+					},
+					success(re) {
+						console.log(re.data.data.resultCode)
+						if(re.data.data.resultCode != 200)
+						{
+							// 弹出不符合条件的页面
+							console.log(2)
+						}
+					}
+				})
+				/**
+				 * 验证用户262车主
+				 */
+				uni.request({
+					url: 'http://change.bluehd.cn/api.php/userinfo/getCarWhetherPerson',
+					method: 'POST',
+					data: {
+						access_token: '5b7f60aca7e7f6f8c680b1b219ad3ec6',
+						userId: userId,
+						tel: phone,
+						vin: vin
+					},
+					success(re) {
+						console.log(re.data.data.resultCode)
+						if(re.data.data.resultCode != 200)
+						{
+							// 弹出不符合条件的页面
+							console.log(3)
+						}
+					}
+				})
+				/**
+				 * 储存用户信息
+				 */
+				// uni.request({
+				// 	url: 'http://change.bluehd.cn/api.php/userinfo/sendUserInfo',
+				// 	method: 'POST',
+				// 	data: {
+				// 		access_token: '5b7f60aca7e7f6f8c680b1b219ad3ec6',
+				// 		user: user,
+				// 		tel: phone,
+				// 		vin: vin
+				// 	},
+				// 	success(re) {
+				// 		console.log(re)
+				// 	}
+				// })
 			};
 			GTMC.getUserDetails('getUserInfo', _this.phone);
+			/**
+			 * 获取题库
+			 */
+			uni.request({
+				url: 'http://change.bluehd.cn/api.php/problem/problemlist',
+				method: 'POST',
+				data: {
+					'access_token': '5b7f60aca7e7f6f8c680b1b219ad3ec6'
+				},
+				success(res) {
+					if(res.statusCode == 500)
+					{
+						window.location.reload()
+					}
+					_this.oneData = res.data.data[0];
+					_this.twoData = res.data.data[1];
+					_this.threeData = res.data.data[2];
+					_this.fourData = res.data.data[3];
+					_this.fiveData = res.data.data[4];
+				}
+			});
+		},
+		mounted() {
+			let _this = this;
+			_this.suspendMusic = !_this.suspendMusic;
+			_this.showMusic = !_this.showMusic;
+			document.querySelector('#bjMusic audio').play();
+			_this.answerAudioAutoPlay();
 		},
 		methods: {
 			playMusic(mid) {

@@ -72,7 +72,7 @@
     },
     "h5" : {
         "title" : "悦享有礼",
-        "domain" : "invite.bluehd.cn",
+        "domain" : "relay.bluehd.cn",
         "router" : {
             "base" : ""
         }
